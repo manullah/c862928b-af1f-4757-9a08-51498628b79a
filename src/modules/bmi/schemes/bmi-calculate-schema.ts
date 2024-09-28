@@ -8,7 +8,7 @@ export const BmiCalculateSchema = object().shape({
     .typeError('Weight is required'),
   height: number()
     .positive('Height must be positive')
-    .max(299.9, 'Maximum height is 299.9 cm')
+    .max(999.9, 'Maximum height is 299.9 cm')
     .required()
     .typeError('Height is required'),
   bodyFat: number()
