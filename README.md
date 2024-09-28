@@ -1,36 +1,105 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# NextJS BMI Calculator
+
+This is a BMI (Body Mass Index) calculator application built with Next.js. It allows users to input their personal data and body measurements to calculate their BMI, providing a visual representation of their health status.
 
 ## Getting Started
 
-First, run the development server:
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-```bash
+### Prerequisites
+
+- Make sure you have Node.js installed on your machine. You can download it from [nodejs.org](https://nodejs.org/).
+- npm (comes with Node.js) or yarn package manager
+
+### Installing
+
+1. Clone the repository:
+   ```
+   git clone https://github.com/manullah/c862928b-af1f-4757-9a08-51498628b79a.git
+   ```
+2. Navigate to the project directory:
+   ```
+   cd c862928b-af1f-4757-9a08-51498628b79a
+   ```
+3. Install the dependencies:
+   ```
+   npm install
+   # or
+   yarn install
+   ```
+
+### Running the app
+
+To run the app in development mode, use the following command:
+
+```
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Building for production
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+To build the app for production, run:
 
-## Learn More
+```
+npm run build
+# or
+yarn build
+```
 
-To learn more about Next.js, take a look at the following resources:
+Then, to start the production server:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+npm start
+# or
+yarn start
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Packages Used
 
-## Deploy on Vercel
+This project uses the following packages:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. **next: ^14.2.13**
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+   - Purpose: The core framework for server-rendered React applications.
+   - Usage: Used throughout the app for routing, server-side rendering, and API routes.
+
+2. **react: ^18** and **react-dom: ^18**
+
+   - Purpose: Core libraries for building user interfaces with React.
+   - Usage: Used throughout the app for creating components and managing the UI.
+
+3. **react-hook-form: ^3.9.0**
+
+   - Purpose: Provides efficient form validation with minimal re-renders.
+   - Usage: Used in the BMI input form for handling form state and validation.
+
+4. **yup: ^1.4.0**
+
+   - Purpose: Object schema validation.
+   - Usage: Used in conjunction with react-hook-form for form validation.
+
+5. **tailwindcss: ^3.4.1**
+   - Purpose: A utility-first CSS framework.
+   - Usage: Used for styling the components and layout of the application.
+
+## Features
+
+- Onboarding flow with gender selection and date of birth input
+- Body measurements input form
+- BMI calculation
+- Visual representation of BMI status
+- Profile page displaying all user information
+
+## Project Structure
+
+- `app/`: Contains the main pages of the application
+  - `homepage/page.tsx`: Welcome page
+  - `gender-selection/page.tsx`: Gender selection and date of birth input page
+  - `calculate/page.tsx`: Body measurements input form
+  - `profile./page.tsx`: Profile page with BMI calculation and visualization
+- `components/`: Reusable React components
+- `modules/`: Utility functions, including BMI calculation logic
